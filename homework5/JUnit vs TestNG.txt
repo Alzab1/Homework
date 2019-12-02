@@ -1,0 +1,27 @@
+1.Test Setup
+- JUnit offers initialization and cleanup at two levels, before and after each method and class. We have @BeforeEach, @AfterEach annotations at method level and @BeforeAll and @AfterAll at class level.
+- Similar to JUnit, TestNG also provides initialization and cleanup at the method and class level. While @BeforeClass and @AfterClass remain the same at the class level, the method level annotations are @BeforeMethod and @AfterMethod.
+TestNG also offers, @BeforeSuite, @AfterSuite, @BeforeGroup and @AfterGroup annotations, for configurations at suite and group levels.
+Also, we can use the @BeforeTest and @AfterTest if we need any configuration before or after test cases included in the <test> tag in TestNG XML configuration file.
+//Т.е в TestNG больше уровней дифференциации, что позволяет проще управлять группами тестов на разных уровнях).  
+Note that the declaration of @BeforeClass and @AfterClass method has to be static in JUnit. By comparison, TestNG method declaration doesn't have these constraints.
+2.  Custom Test Name
+TestNG there is no way to provide a custom name.
+//Кастомные имена могут улучшить читаемость кода. Плюс в огород JUnit.
+3. Running Tests Together
+//И там и там можно ранить одновременно, но в TestNG больше возможностей группировки и выборки тестов. Если в JUnit запускать можно вместе классы, пакеты. То в TestNG можно запустить отдельные методы из разных классов и пакетов, относящиеся к определенным группам(groupName). В TestNG для группирвки тестов удобно использовать xml.
+4. Testing Exceptions
+//Не нашел как в TestNG добавить свое сообщение.
+5.Parameterized Tests
+//И там и там есть параметризация.
+В TestNG @DataProvider позволяет передавать и примитивы и объекты классов в качестве параметров. А также можно использовать xml для параметризации.
+6.Dependent Tests
+TestNG supports dependency testing. This means in a set of test methods, if the initial test fails, then all subsequent dependent tests will be skipped, not marked as failed as in the case for JUnit.
+7.Order of Test Execution
+JUnit
+The MethodSorters.NAME_ASCENDING parameter sorts the methods by method name is lexicographic order. Apart from this sorter, we have MethodSorter.DEFAULT and MethodSorter.JVM as well.
+//В TestNG намного больше возможностей управлять последовательностью тестов благодаря priority parameter или dependsOnMethods parameter или, например, прописать каждый класс отдельно, обернув в отдельный тест, в xml файле.
+8. TestNG has Parallel test run support.
+//TestNG предоставляет несколько способов выполнения тестов в многопоточном режиме, один из которых выполняет каждый метод тестирования в одном потоке. Этот режим значительно сокращает время выполнения, поскольку параллельно выполняется больше тестов, следовательно, сокращается общее время выполнения.
+9.@Listener
+//Какие-то магические слушатели, которыe позволяют расширить функционал. У них есть свои имена. Например,IReporter позволет коим-то образом делать кастомные отчеты.
