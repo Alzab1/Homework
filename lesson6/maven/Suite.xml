@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+    <test name="Test1">
+        <parameter name = "expResult" value = "25.0"/>
+        <parameter name = "eData" value="5.0"/>
+        <classes>
+            <class name="pvt.CalculatorTest"/>
+            <class name="pvt.AppTest"/>
+        </classes>
+    </test>
+</suite>
