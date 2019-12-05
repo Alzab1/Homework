@@ -1,0 +1,68 @@
+﻿
+*{padding: 0; margin: 0;}/*обнуление css*/
+#wrapper {
+	width: 960px;
+	/*height: 500px;*/
+	border: 5px solid #090;
+	margin: 0 auto; /*двигаю блок на центр одинаковыми внешними отступами*/
+}
+header{
+	height: 100px;
+	background: #fc3;
+	/*2. Задание относительногопозиционирования для блока header (родителя обсолютнопозиционированного блока Logo), позволило блоку Header удержать блок logo внутри себя).*/
+	position: relative;
+	
+	}
+h1{
+	text-align: center;
+	padding-top: 30px;}
+	
+#logo{
+	width: 130px;
+	height: 80px;
+	background: rgb(0,0,255);/* #00f*/
+	/*1. После задания обсолютного позиционирования для блока лого, заголовок h1 вернулся на свое место. Абсолютно позиционированный блок не учавствует в формировании страницы(выпадает из нормального потока, оказывается на отдельном слое)*/
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	z-index: 2; /*порядок отображения слоев*/
+	box-shadow: 10px 5px 4px rgba(0,255,0,.6); /*ось х, ось у, растушевка, цвет 0.6*/
+	}
+#logo2{
+	width: 130px;
+	height: 80px;
+	background: rgb(200,0,255);
+	position: absolute;
+	left: 50px;
+	top: 50px;
+	z-index: 1;
+	}
+nav{
+	width: 200px;
+	/*height: 400px;
+	background: #ff0;*/
+	float: left; /*размещаю блоки banners and content правее блока nav*/
+	}
+nav ul{
+	list-style-type: none; /*убрал маркеры*/
+	padding: 40px 0 0 10px;}
+nav a{
+	background: url(img/button-150-100.png);
+	width: 130px; /* 150=130+20 ширина картинки*/
+	height: 35px; /*50=35+15 половина высоты картинки*/
+	display: block; /*превращаю ссылку в блочный элемент, что бы подогнать ее под размер картинки*/
+	padding: 15px 0 0 20px;
+	}
+nav a:hover{
+	background: url(img/button-150-100.png) 0 -50px;/*двигаем картинку*/
+	text-decoration: none;
+	}
+#banners {
+	width: 150px;
+	/*height: 400px;
+	background: #0f0;*/
+	float: right; /*Двигаю блок banners к правой стороне макета*/}
+#content {
+	margin: 0 160px 0 210px;}
+#second{
+	background: url(img/fon_960.jpg.)}

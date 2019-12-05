@@ -1,0 +1,23 @@
+Вариант1                                                                  Вариант2                                           Вариант3
+.//span[contains(text(),'Мой Мир')]                         .//*[@id="ph_my"]                                           .//a[@id="ph_my"]
+.//i[contains(text(),'Все проекты')]                        .//*[@id="PH_projectsMenu_button"]                          .//a[@id="PH_projectsMenu_button"]
+.//a[contains(text(),'Картинки')]                           .//*[@id="search__categories"]/a[2]
+.//label[@class="search__icon"]                             .//*[@id="search"]/label[1]
+.//a[@href="https://promo.calendar.mail.ru/"]               .//*[@id="auth"]/div[1]/a[2]
+.//input[@placeholder="Имя ящика"]                          .//*[@id="mailbox:login"]
+.//a[@tabindex="33"]                                        .//*[@id="I5iuxYf"]/div/div[4]/div/div[2]/div[1]/a[4]  
+.//span[@class="tabs__dropdown-button o-dropdown__button js-click"]    .//*[@id="tabs:dropdown-container"]/span
+.//input[@id="search:submit"]                               .//*[@id="search:submit"]
+.//label[@tabindex='25']                                    .//*[@id="save:row"]/label
+.//div[@class="I5iuxKr"]/a[@href="//sportmail.ru"]          .//*[@id="I5iuxYf"]/div/div[4]/div/div[2]/div[2]/div[5]/div/div[9]/div/a[1]
+.//a[@href="//sportmail.ru" and @name="clb571759"]   
+.//a[@class="I5iuxMw I5iuxeB I5iuxMo"][1]                   .//*[@id="I5iuxYf"]/div/div[4]/div/div[2]/div[5]/div[3]/a[1]
+
+
+
+
+/*Второй столбик - это XPath сгенерированный самим браузером. Заметил характерную особенность, браузер всегда привязывается к ближайшему id и строит путь от него. А мои XPath бьют точно в цель или привязываюся к "родителю".
+А 3-ий столбик - это когда первый и второй чем-то смущают.*/
+
+
+
