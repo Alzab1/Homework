@@ -49,12 +49,14 @@ public class ParisTest {
             Comparator<WebElement> scoreComparator = Comparator.comparing(WebElement::getText);
             elements1.sort(scoreComparator.reversed());
             elements1.get(0).click();
-            ArrayList<String> win2 = new ArrayList<String>(driver.getWindowHandles());
-            driver.switchTo().window(win2.get(1));
+            ArrayList<String> win = new ArrayList<String>(driver.getWindowHandles());
+            driver.switchTo().window(win.get(1));
             int totalPrice = Integer.parseInt(driver
                     .findElement(By.xpath(".//div[contains(@class,'bui-price-display__value prco')]"))
                     .getText().substring(4).replace(" ", ""));
             Assert.assertTrue(pricePerNight >= totalPrice / stayNights);
+            driver.close();
+            driver.switchTo().window(win.get(0));
         }
     }
 
@@ -91,7 +93,7 @@ public class ParisTest {
         driver.findElement(By.xpath(".//button[@data-sb-id]")).click();
         driver.findElement(By.xpath(".//a[@data-name='pri'][last()]")).click();
         driver.findElement(By.xpath(".//a[contains(text(),'Цена (сначала самая низкая)')] ")).click();
-        Thread.sleep(5000);
+         Thread.sleep(5000);
         driver.findElement(By.xpath("//a[@class='hotel_name_link url']")).click();
         ArrayList<String> win = new ArrayList<String>(driver.getWindowHandles());
         driver.switchTo().window(win.get(1));
