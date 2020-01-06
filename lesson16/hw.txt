@@ -1,0 +1,36 @@
+﻿1)SELECT * FROM Categories
+2)SELECT CategoryID, CategoryName FROM Categories
+3)SELECT Address FROM [Suppliers]
+4)SELECT * FROM [Products] order by price
+5)SELECT * FROM [Orders] order by CustomerID, ShipperID
+6)Выбрать все продукты, цена которых больше 40 и отсортировать по названию в обратном порядке
+SELECT * FROM [Products] where price > 40 order by ProductName Desc
+7)Выбрать все продукты, цена которых находится в диапазоне от 20 до 50 и отсортировать по юниту 
+SELECT * FROM [Products] where price between 20 and 50 order by Unit
+8)Выбрать все продукты, цена которых находится в диапазоне от 20 до 100 или CategoryID = 6
+SELECT * FROM [Products] where price between 20 and 100 or CategoryID = 6
+9)Выбрать все продукты, цена которых равна 46, 53, 55 (2-мя способами)
+SELECT * FROM [Products] where price in (46, 53, 55)
+SELECT * FROM [Products] where price = 46 or price = 53 or price = 55
+10)Выбрать все продукты, кроме тех, цена которых равна 46, 53, 55
+SELECT * FROM [Products] where not price in (46, 53, 55)
+11)Выбрать все продукты, в имени которых есть сочетание «han»
+SELECT * FROM [Products] where ProductName like '%han%'
+12)Вставить одну полную строку в таблицу Shippers
+INSERT INTO Shippers (ShipperID, ShipperName, Phone) VALUES (8,'aa', '7023568')
+13)Вставить строку с 2-мя указанными значениями в таблицу Shippers
+INSERT INTO Shippers (ShipperName, Phone) VALUES ('aa', '7023568')
+14)Вставить значения из таблицы Shippers в таблицу Categories
+insert into categories (CategoryName, Description) select ShipperName, Phone from shippers
+15)Вставить значения из таблицы Shippers c именем поставщика «Speedy Express» в таблицу Categories 
+insert into categories (CategoryName, Description) select ShipperName, Phone from shippers where shippername = "Speedy Express"
+16) Удалить из таблицы Shippers доставщика с именем 	«Speedy Express»
+delete from shippers where shippername = "Speedy Express"
+17)Удалить продукты, цена которых меньше 50
+delete from products where price < 50
+18)Удалить все заказы
+delete from orders
+19) Изменить описании категории продукта с названием категории = «Beverages» на любое другое
+update categories set description = "juices" where categoryname = "Beverages"
+20)Изменить цену продукта с именем Chais на любую другую
+update products set price = "1000" where productname = "Chais"
