@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Users>
+    <User id="1">
+        <login>zabavasa</login>
+        <domain>@list</domain>
+        <password>pvtpvt2020</password>
+    </User>
+    <User id="2">
+        <login>zabavasa</login>
+        <domain>@mail</domain>
+        <password>pvtpvt2020</password>
+    </User>
+    <User id="3">
+        <login>zabavasa</login>
+        <domain>@bk</domain>
+        <password>pvtpvt2020</password>
+    </User>
+    <User id="4">
+        <login>zabavasa</login>
+        <domain>@inbox</domain>
+        <password>pvtpvt2020</password>
+    </User>
+    <User id="5">
+        <login>zabavasa</login>
+        <domain>@list</domain>
+        <password>123abv</password>
+    </User>
+    <User id="6">
+        <login>  zabavasa  </login>
+        <domain>@list</domain>
+        <password>pvtpvt2020</password>
+    </User>
+    <User id="7">
+        <login>zabavasa</login>
+        <domain>@list</domain>
+        <password>  pvtpvt2020  </password>
+    </User>
+    <User id="8">
+        <login>ZABAVASA</login>
+        <domain>@list</domain>
+        <password>pvtpvt2020</password>
+    </User>
+    <User id="9">
+        <login>abracadabra</login>
+        <domain>@list</domain>
+        <password>pvtpvt2020</password>
+    </User>
+</Users>
